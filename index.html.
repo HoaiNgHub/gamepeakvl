@@ -3,33 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kho Game Của Tôi</title>
+    <title>gamepeakvl | Link Macro Free Fire</title>
+    <!-- Font chữ Gaming hiện đại -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: #fff; text-align: center; padding: 20px; }
-        h1 { color: #00ff7f; }
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
-        .card { background: #1e1e1e; border: 1px solid #333; border-radius: 8px; padding: 15px; width: 200px; text-decoration: none; color: white; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: #00ff7f; }
-        .card h3 { margin: 10px 0 5px 0; color: #00ff7f; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0d0f17;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Tiêu đề chính */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            color: #00ffcc;
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 30px rgba(0, 255, 204, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #a0a5b5;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Container chứa các mục */
+        .main-container {
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        /* Mục lớn */
+        .section-box {
+            background: rgba(22, 27, 42, 0.8);
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-box.vip {
+            border-color: rgba(255, 0, 128, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.15);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .free-title {
+            color: #00ffcc;
+            border-bottom: 2px solid #00ffcc;
+            padding-bottom: 8px;
+        }
+
+        .vip-title {
+            color: #ff007f;
+            border-bottom: 2px solid #ff007f;
+            padding-bottom: 8px;
+        }
+
+        /* Lưới chứa các nút bấm */
+        .grid-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        /* Style Nút bấm Link Miễn Phí */
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #1a233a, #0f172a);
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-4px) scale(1.02);
+            background: #00ffcc;
+            color: #0d0f17;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+        }
+
+        /* Style Nút VIP (Mua Zalo) */
+        .btn-zalo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff007f, #7928ca);
+            border: none;
+            border-radius: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+            text-align: center;
+        }
+
+        .btn-zalo:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 0 35px rgba(255, 0, 128, 0.9);
+            background: linear-gradient(135deg, #7928ca, #ff007f);
+        }
+
+        .badge {
+            background: #ffcc00;
+            color: #000;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
 
-    <h1>🎮 KHO GAME GITHUB</h1>
-    <p>Tổng hợp các link game hay nhất</p>
+    <div class="header">
+        <h1>GAMEPEAKVL</h1>
+        <p>Các link game hỗ trợ ae chơi mượt mà và peak hơn vs mọi đối thủ</p>
+    </div>
 
-    <div class="grid">
-        <!-- Bắt đầu 1 thẻ game -->
-        <a href="https://github.com/link-game-1" target="_blank" class="card">
-            <h3>Game Tên 1</h3>
-            <p>Mô tả ngắn về game 1</p>
-        </a>
-        <!-- Kết thúc 1 thẻ game -->
+    <div class="main-container">
 
-        <a href="https://github.com/link-game-2" target="_blank" class="card">
-            <h3>Game Tên 2</h3>
-            <p>Mô tả ngắn về game 2</p>
-        </a>
+        <!-- MỤC LỚN 1: MACRO FREE FIRE MIỄN PHÍ -->
+        <div class="section-box">
+            <h2 class="section-title free-title">🔥 Macro Free Fire Miễn Phí</h2>
+            <div class="grid-links">
+                <!-- Thay link_cua_ban_1 thành đường link thực tế của bạn -->
+                <a href="https://link_cua_ban_1.com" target="_blank" class="btn-link">⚡ Macro FF Bản #1 (Tải Ngay)</a>
+                <a href="https://link_cua_ban_2.com" target="_blank" class="btn-link">⚡ Macro FF Bản #2 (Tải Ngay)</a>
+                <a href="https://link_cua_ban_3.com" target="_blank" class="btn-link">⚡ Macro FF Bản #3 (Tải Ngay)</a>
+                <a href="https://link_cua_ban_4.com" target="_blank" class="btn-link">⚡ Macro FF Bản #4 (Tải Ngay)</a>
+            </div>
+        </div>
+
+        <!-- MỤC LỚN 2: MUA MACRO FF SIÊU BÁ -->
+        <div class="section-box vip">
+            <h2 class="section-title vip-title">👑 Mua Macro FF Siêu Bá <span class="badge">VIP</span></h2>
+            <div>
+                <!-- Bấm vào sẽ tự mở ứng dụng Zalo chat trực tiếp -->
+                <a href="https://zalo.me/0703794990" target="_blank" class="btn-zalo">
+                    💬 Liên Hệ Mua Macro Qua Zalo: 0703794990
+                </a>
+            </div>
+        </div>
+
     </div>
 
 </body>
