@@ -163,7 +163,7 @@
             box-shadow: 0 0 20px rgba(0, 255, 163, 0.8);
         }
 
-        /* Nút Zalo VIP */
+        /* Nút VIP */
         .vip-badge {
             background: #f59e0b;
             color: #000;
@@ -171,6 +171,12 @@
             padding: 2px 8px;
             border-radius: 6px;
             font-weight: 800;
+        }
+
+        .vip-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
         .btn-zalo {
@@ -182,17 +188,39 @@
             background: linear-gradient(135deg, #0084ff, #0055ff);
             color: #ffffff;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-decoration: none;
-            padding: 16px;
+            padding: 15px;
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(0, 132, 255, 0.4);
             transition: all 0.3s ease;
         }
 
         .btn-zalo:hover {
-            transform: scale(1.02);
+            transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(0, 132, 255, 0.8);
+        }
+
+        .btn-facebook {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #1877f2, #0d52b5);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-facebook:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(24, 119, 242, 0.8);
         }
     </style>
 </head>
@@ -267,9 +295,14 @@
         <!-- MỤC LỚN 2 -->
         <div class="box">
             <h2 class="box-title">👑 Mua Macro FF siêu bá <span class="vip-badge">VIP</span></h2>
-            <a href="https://zalo.me/0703794990" target="_blank" class="btn-zalo">
-                💬 Liên Hệ Mua Macro Siêu VIP qua Zalo: 0703794990
-            </a>
+            <div class="vip-buttons">
+                <a href="https://zalo.me/0703794990" target="_blank" class="btn-zalo">
+                    💬 Liên Hệ Mua Macro Siêu VIP qua Zalo: 0703794990
+                </a>
+                <a href="https://www.facebook.com/NguyenThanhHoai252011/" target="_blank" class="btn-facebook">
+                    🌐 Liên Hệ Mua Macro Siêu VIP qua Facebook Admin
+                </a>
+            </div>
         </div>
 
     </div>
