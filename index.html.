@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gamepeakvl | Link Macro Free Fire</title>
-    <!-- Font chữ Gaming hiện đại -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font chữ Gaming -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -14,181 +14,243 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background: #0d0f17;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #0b111e;
             color: #ffffff;
             min-height: 100vh;
-            padding: 30px 15px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Tiêu đề chính */
+        /* Tiêu đề trang */
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .header h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: #00ffcc;
-            text-shadow: 0 0 15px rgba(0, 255, 204, 0.6), 0 0 30px rgba(0, 255, 204, 0.2);
-            text-transform: uppercase;
+            font-size: 3rem;
+            color: #00ffa3;
+            text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
             letter-spacing: 2px;
         }
 
         .header p {
-            color: #a0a5b5;
-            margin-top: 10px;
+            color: #94a3b8;
+            margin-top: 8px;
             font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        /* Container chứa các mục */
-        .main-container {
+        /* Khung chứa các mục */
+        .container {
             width: 100%;
-            max-width: 850px;
+            max-width: 800px;
             display: flex;
             flex-direction: column;
-            gap: 35px;
+            gap: 30px;
         }
 
-        /* Mục lớn */
-        .section-box {
-            background: rgba(22, 27, 42, 0.8);
-            border: 1px solid rgba(0, 255, 204, 0.2);
+        /* Khung mục lớn */
+        .box {
+            background: #131b2e;
+            border: 1px solid #1e293b;
             border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
-        .section-box.vip {
-            border-color: rgba(255, 0, 128, 0.4);
-            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.15);
-        }
-
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+        .box-title {
+            font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .free-title {
-            color: #00ffcc;
-            border-bottom: 2px solid #00ffcc;
-            padding-bottom: 8px;
-        }
-
-        .vip-title {
-            color: #ff007f;
-            border-bottom: 2px solid #ff007f;
-            padding-bottom: 8px;
-        }
-
-        /* Lưới chứa các nút bấm */
-        .grid-links {
+        /* Lưới 4 nút nhỏ */
+        .grid-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
         }
 
-        /* Style Nút bấm Link Miễn Phí */
-        .btn-link {
+        /* Thẻ mục nhỏ */
+        .card {
+            background: #182238;
+            border: 1px solid #2a3756;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #00ffa3;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 163, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            background: #1e293b;
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 20px;
-            background: linear-gradient(135deg, #1a233a, #0f172a);
-            border: 1px solid #00ffcc;
             border-radius: 10px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-info h3 {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+        }
+
+        .card-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* Nút Download xanh neon */
+        .btn-download {
+            display: block;
             text-align: center;
+            background: #00ffa3;
+            color: #09111e;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.2s;
+            box-shadow: 0 0 10px rgba(0, 255, 163, 0.4);
         }
 
-        .btn-link:hover {
-            transform: translateY(-4px) scale(1.02);
-            background: #00ffcc;
-            color: #0d0f17;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+        .btn-download:hover {
+            background: #00e693;
+            box-shadow: 0 0 20px rgba(0, 255, 163, 0.7);
         }
 
-        /* Style Nút VIP (Mua Zalo) */
+        /* Nút Zalo VIP */
+        .vip-badge {
+            background: #f59e0b;
+            color: #000;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 800;
+        }
+
         .btn-zalo {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 20px;
-            background: linear-gradient(135deg, #ff007f, #7928ca);
-            border: none;
-            border-radius: 12px;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #0084ff, #0055ff);
             color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
             text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 132, 255, 0.4);
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
-            text-align: center;
         }
 
         .btn-zalo:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 0 35px rgba(255, 0, 128, 0.9);
-            background: linear-gradient(135deg, #7928ca, #ff007f);
-        }
-
-        .badge {
-            background: #ffcc00;
-            color: #000;
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 12px;
-            margin-left: 8px;
-            vertical-align: middle;
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(0, 132, 255, 0.8);
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>GAMEPEAKVL</h1>
-        <p>Các link game hỗ trợ ae chơi mượt mà và peak hơn vs mọi đối thủ</p>
+        <h1>gamepeakvl</h1>
+        <p>Tổng hợp Link Game & Macro đỉnh cao.</p>
     </div>
 
-    <div class="main-container">
+    <div class="container">
 
-        <!-- MỤC LỚN 1: MACRO FREE FIRE MIỄN PHÍ -->
-        <div class="section-box">
-            <h2 class="section-title free-title">🔥 Macro Free Fire Miễn Phí</h2>
-            <div class="grid-links">
-                <!-- Thay link_cua_ban_1 thành đường link thực tế của bạn -->
-                <a href="https://link_cua_ban_1.com" target="_blank" class="btn-link">⚡ Macro FF Bản #1 (Tải Ngay)</a>
-                <a href="https://link_cua_ban_2.com" target="_blank" class="btn-link">⚡ Macro FF Bản #2 (Tải Ngay)</a>
-                <a href="https://link_cua_ban_3.com" target="_blank" class="btn-link">⚡ Macro FF Bản #3 (Tải Ngay)</a>
-                <a href="https://link_cua_ban_4.com" target="_blank" class="btn-link">⚡ Macro FF Bản #4 (Tải Ngay)</a>
+        <!-- MỤC LỚN 1 -->
+        <div class="box">
+            <h2 class="box-title">🎮 Macro Free Fire Miễn Phí</h2>
+            <div class="grid-cards">
+
+                <!-- Mục nhỏ 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🛡️</div>
+                        <div class="card-info">
+                            <h3>Macro FF Bản #1</h3>
+                            <p>Tốc độ cao</p>
+                        </div>
+                    </div>
+                    <!-- Thay link của bạn vào chữ href="..." bên dưới -->
+                    <a href="THAY_LINK_1_VÀO_ĐÂY" target="_blank" class="btn-download">Download Now</a>
+                </div>
+
+                <!-- Mục nhỏ 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🚀</div>
+                        <div class="card-info">
+                            <h3>Macro FF Bản #2</h3>
+                            <p>Bảo mật tốt</p>
+                        </div>
+                    </div>
+                    <!-- Thay link của bạn vào chữ href="..." bên dưới -->
+                    <a href="THAY_LINK_2_VÀO_ĐÂY" target="_blank" class="btn-download">Download Now</a>
+                </div>
+
+                <!-- Mục nhỏ 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-info">
+                            <h3>Macro FF Bản #3</h3>
+                            <p>An toàn tuyệt đối</p>
+                        </div>
+                    </div>
+                    <!-- Thay link của bạn vào chữ href="..." bên dưới -->
+                    <a href="THAY_LINK_3_VÀO_ĐÂY" target="_blank" class="btn-download">Download Now</a>
+                </div>
+
+                <!-- Mục nhỏ 4 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-info">
+                            <h3>Macro FF Bản #4</h3>
+                            <p>Mượt mà cho máy yếu</p>
+                        </div>
+                    </div>
+                    <!-- Thay link của bạn vào chữ href="..." bên dưới -->
+                    <a href="THAY_LINK_4_VÀO_ĐÂY" target="_blank" class="btn-download">Download Now</a>
+                </div>
+
             </div>
         </div>
 
-        <!-- MỤC LỚN 2: MUA MACRO FF SIÊU BÁ -->
-        <div class="section-box vip">
-            <h2 class="section-title vip-title">👑 Mua Macro FF Siêu Bá <span class="badge">VIP</span></h2>
-            <div>
-                <!-- Bấm vào sẽ tự mở ứng dụng Zalo chat trực tiếp -->
-                <a href="https://zalo.me/0703794990" target="_blank" class="btn-zalo">
-                    💬 Liên Hệ Mua Macro Qua Zalo: 0703794990
-                </a>
-            </div>
+        <!-- MỤC LỚN 2 -->
+        <div class="box">
+            <h2 class="box-title">👑 Mua Macro FF siêu bá <span class="vip-badge">VIP</span></h2>
+            <a href="https://zalo.me/0703794990" target="_blank" class="btn-zalo">
+                💬 Liên Hệ Mua Macro Siêu VIP qua Zalo: 0703794990
+            </a>
         </div>
 
     </div>
