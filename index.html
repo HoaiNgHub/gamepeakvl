@@ -509,7 +509,7 @@
         </div>
     </div>
 
-    <!-- Script Tuyết & Xử Lý Unlock Link -->
+    <!-- Script Tuyết & Xử Lý Anti-Cheat -->
     <script>
         /* === HIỆU ỨNG TUYẾT RƠI === */
         const canvas = document.getElementById('snow-canvas');
@@ -562,7 +562,7 @@
         }
         animate();
 
-        /* === LOGIC OVERLAY UNLOCK LINK & AUTO RESET === */
+        /* === LOGIC UNLOCK LINK & HỆ THỐNG CHỐNG GIAN LẬN (< 15s) === */
         let currentTargetUrl = '';
         let task1Done = false;
         let task2Done = false;
@@ -570,10 +570,15 @@
         let countdown2 = null;
         let autoResetTimeout = null;
 
-        // Hàm đặt lại toàn bộ trạng thái nhiệm vụ
+        // BIẾN KIỂM TRA CHỐNG GIAN LẬN
+        let activeTask = 0;       // Đang chạy Task 1 hay 2
+        let taskStartTime = 0;    // Thời điểm bấm chuyển sang tab mới
+
         function resetAllTasks() {
             task1Done = false;
             task2Done = false;
+            activeTask = 0;
+            taskStartTime = 0;
 
             if (countdown1) clearInterval(countdown1);
             if (countdown2) clearInterval(countdown2);
@@ -595,13 +600,13 @@
 
         function openUnlockModal(targetUrl) {
             currentTargetUrl = targetUrl;
-            resetAllTasks(); // Luôn reset nhiệm vụ mỗi khi mở ô mới
+            resetAllTasks();
             document.getElementById('unlock-modal').style.display = 'flex';
 
-            // Đặt thời gian tự động reset sau 1 phút (60,000 ms)
+            // Auto Reset sau 1 phút nếu không làm xong
             autoResetTimeout = setTimeout(() => {
                 resetAllTasks();
-                alert("Đã hết thời gian (1 phút)! Vui lòng làm lại nhiệm vụ.");
+                alert("Hết thời gian (1 phút)! Vui lòng thực hiện lại nhiệm vụ.");
             }, 60000);
         }
 
@@ -611,11 +616,16 @@
         }
 
         function startTask(taskNum, url) {
+            if ((taskNum === 1 && task1Done) || (taskNum === 2 && task2Done)) return;
+
+            // Đánh dấu nhiệm vụ đang thực hiện & lưu thời gian bấm
+            activeTask = taskNum;
+            taskStartTime = Date.now();
+
             window.open(url, '_blank');
+
             let timerElement = document.getElementById(`timer-${taskNum}`);
             let checkElement = document.getElementById(`check-${taskNum}`);
-
-            if ((taskNum === 1 && task1Done) || (taskNum === 2 && task2Done)) return;
 
             let timeLeft = 40;
             let currentTimer = setInterval(() => {
@@ -630,6 +640,7 @@
                     if (taskNum === 1) task1Done = true;
                     if (taskNum === 2) task2Done = true;
 
+                    activeTask = 0;
                     checkTasksReady();
                 }
             }, 1000);
@@ -637,6 +648,19 @@
             if (taskNum === 1) countdown1 = currentTimer;
             if (taskNum === 2) countdown2 = currentTimer;
         }
+
+        /* HỆ THỐNG PHÁT HIỆN QUAY LẠI TRANG QUÁ NHANH (< 15S) */
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && activeTask !== 0) {
+                let timeSpentSeconds = (Date.now() - taskStartTime) / 1000;
+
+                // Nếu người dùng quay lại tab khi chưa đủ 15 giây
+                if (timeSpentSeconds < 15) {
+                    alert("⚠️ CẢNH BÁO GIAN LẬN: Bạn chưa thực hiện Sub/Like mà đã quay lại trang quá nhanh! Nhiệm vụ bị reset.");
+                    resetAllTasks();
+                }
+            }
+        });
 
         function checkTasksReady() {
             if (task1Done && task2Done) {
