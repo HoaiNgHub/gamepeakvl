@@ -485,7 +485,7 @@
                         <div class="hexagon-check pending" id="check-1">✓</div>
                     </div>
 
-                    <!-- Task 2 (Đã đổi tên thành FOLLOW ADMIN) -->
+                    <!-- Task 2 -->
                     <div class="task-item" onclick="startTask(2, 'https://facebook.com/NguyenThanhHoai252011/')">
                         <div class="task-left">
                             <div class="task-icon-modal">🎯</div>
@@ -602,10 +602,11 @@
             resetAllTasks();
             document.getElementById('unlock-modal').style.display = 'flex';
 
+            // Auto Reset sau 3 phút (180,000 ms) nếu chưa hoàn thành nhiệm vụ
             autoResetTimeout = setTimeout(() => {
                 resetAllTasks();
-                alert("Hết thời gian (1 phút)! Vui lòng thực hiện lại nhiệm vụ.");
-            }, 60000);
+                alert("Hết thời gian (3 phút)! Vui lòng thực hiện lại nhiệm vụ.");
+            }, 180000);
         }
 
         function closeUnlockModal() {
