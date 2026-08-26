@@ -485,12 +485,12 @@
                         <div class="hexagon-check pending" id="check-1">✓</div>
                     </div>
 
-                    <!-- Task 2 -->
+                    <!-- Task 2 (Đã đổi tên thành FOLLOW ADMIN) -->
                     <div class="task-item" onclick="startTask(2, 'https://facebook.com/NguyenThanhHoai252011/')">
                         <div class="task-left">
                             <div class="task-icon-modal">🎯</div>
                             <div class="task-info-modal">
-                                <h4>DISCOVER THE BEST CONTENT</h4>
+                                <h4>FOLLOW ADMIN</h4>
                                 <p id="timer-2">~40 sec</p>
                             </div>
                         </div>
@@ -570,9 +570,8 @@
         let countdown2 = null;
         let autoResetTimeout = null;
 
-        // BIẾN KIỂM TRA CHỐNG GIAN LẬN
-        let activeTask = 0;       // Đang chạy Task 1 hay 2
-        let taskStartTime = 0;    // Thời điểm bấm chuyển sang tab mới
+        let activeTask = 0;       
+        let taskStartTime = 0;    
 
         function resetAllTasks() {
             task1Done = false;
@@ -603,7 +602,6 @@
             resetAllTasks();
             document.getElementById('unlock-modal').style.display = 'flex';
 
-            // Auto Reset sau 1 phút nếu không làm xong
             autoResetTimeout = setTimeout(() => {
                 resetAllTasks();
                 alert("Hết thời gian (1 phút)! Vui lòng thực hiện lại nhiệm vụ.");
@@ -618,7 +616,6 @@
         function startTask(taskNum, url) {
             if ((taskNum === 1 && task1Done) || (taskNum === 2 && task2Done)) return;
 
-            // Đánh dấu nhiệm vụ đang thực hiện & lưu thời gian bấm
             activeTask = taskNum;
             taskStartTime = Date.now();
 
@@ -654,9 +651,8 @@
             if (!document.hidden && activeTask !== 0) {
                 let timeSpentSeconds = (Date.now() - taskStartTime) / 1000;
 
-                // Nếu người dùng quay lại tab khi chưa đủ 15 giây
                 if (timeSpentSeconds < 15) {
-                    alert("⚠️ CẢNH BÁO GIAN LẬN: Bạn chưa thực hiện Sub/Like mà đã quay lại trang quá nhanh! Nhiệm vụ bị reset.");
+                    alert("⚠️ CẢNH BÁO GIAN LẬN: Bạn chưa thực hiện Sub/Like/Follow mà đã quay lại trang quá nhanh! Nhiệm vụ bị reset.");
                     resetAllTasks();
                 }
             }
